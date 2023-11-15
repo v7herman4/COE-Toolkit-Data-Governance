@@ -46,15 +46,16 @@ The COE toolkit data set does not contain any records that hold information on t
 
 Navigate to the Power Platform Admin Center. Click on _Data_, click on _On-premises data gateways_, click on _Tenant administration for gateways_.
 
-![](RackMultipart20231115-1-bogat7_html_d3ac664d545cbae.png)
+![image](https://github.com/v7herman4/COE-Toolkit-Data-Governance/assets/89024016/1f154260-cef5-4dc5-8104-412d81053199)
 
 For each gateway, hover over the record and click the information circle. Add the gateway name and the gateway id in a spreadsheet or text file.
 
-![](RackMultipart20231115-1-bogat7_html_121378eb162fcd5e.png)
+![image](https://github.com/v7herman4/COE-Toolkit-Data-Governance/assets/89024016/43d1b2c6-77c0-4cce-9adb-d39cb649199e)
+
 
 From the Data Governance app, export a blank spreadsheet, update the spreadsheet with the On-prem Data Gateway information and then upload back into the table.
 
-![](RackMultipart20231115-1-bogat7_html_8d2a4e014dc03b6d.png)
+![image](https://github.com/v7herman4/COE-Toolkit-Data-Governance/assets/89024016/3cfe31ca-550d-4a79-944d-c2223e25074b)
 
 ## Run the _Update Connection Refs with Gateway Info_ Flow
 
@@ -66,19 +67,19 @@ The _Update Connection Refs with Gateway Info_ Flow runs on a nightly basis. Upd
 
 The Connection References areas shows all Apps and Flows that contain a Connection which uses an On-prem Data Gateway. The associated App or Flow is displayed as well as the Data Gateway, the SQL Server Name and the SQL Server database.
 
-![](RackMultipart20231115-1-bogat7_html_2d0cc3322ba160b2.png)
+![image](https://github.com/v7herman4/COE-Toolkit-Data-Governance/assets/89024016/c78f21d5-7856-47b4-aeaa-43bc2cfeb900)
 
 ### Apps with Data Gateway Connections
 
 The Apps shows all Apps that contain a Connection which uses an On-prem Data Gateway AND is shared with at least one other user beside the Owner. The associated App is displayed as well as the number of users or groups its shared with, the Data Gateway, the SQL Server Name and the SQL Server database.
 
-![](RackMultipart20231115-1-bogat7_html_6e1cd88f0b9357bb.png)
+![image](https://github.com/v7herman4/COE-Toolkit-Data-Governance/assets/89024016/6339d0c8-6458-49e9-8825-4d4ff10dd6ce)
 
 ### Flows with Data Gateway Connections
 
 The Flows area shows all Flows that contain a Connection which uses an On-prem Data Gateway AND is shared with at least one other user beside the Owner. The associated Flow is displayed as well as the number of users or groups its shared with, the Data Gateway, the SQL Server Name and the SQL Server database.
 
-![](RackMultipart20231115-1-bogat7_html_c063dc8ce943450f.png)
+![image](https://github.com/v7herman4/COE-Toolkit-Data-Governance/assets/89024016/6744f3ef-cef8-452b-afc3-7d695b26e69e)
 
 ## FAQ
 
@@ -86,7 +87,7 @@ The Flows area shows all Flows that contain a Connection which uses an On-prem D
 
 Key to the Data Governance Solution is the ability of the Power Platform Admin connectors to retrieve all Connections in an Environment using the _Get Connections as Admin_ action. The resulting json contains Connection information including the Data Gateway Id.
 
-![](RackMultipart20231115-1-bogat7_html_39f959d91aa86a37.png)
+![image](https://github.com/v7herman4/COE-Toolkit-Data-Governance/assets/89024016/d720f416-1483-4032-b258-e6d21d941874)
 
 Using the additional Admin Connector actions such as _Get Apps as Admin_ and _List flows as Admin (V2)_ the Power Automate Flow can identify which Apps and Flows are using the Connections highlighted. Parsing of the raw json as an output of the action is required as opposed to using the out of the box values returned.
 
